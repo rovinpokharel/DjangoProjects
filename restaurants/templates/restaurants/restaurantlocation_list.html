@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Restaurant</h2>
+    {% for restaurants in object_list %}
+{#    <li>{{ restaurants.name }}</li>#}
+{#        <li><a href="/restaurant/{{ restaurants.slug }}"> {{ restaurants.name }}</a></li>#}
+        <li><a href = "{% url 'restaurants:detail' slug=restaurants.slug %}"> {{ restaurants.name }}</a></li>
+    {% endfor %}<br>
+    <a href="/restaurant/create/">Add Restaurant</a>
+{% endblock %}
+

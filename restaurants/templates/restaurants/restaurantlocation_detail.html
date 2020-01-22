@@ -1,0 +1,7 @@
+{% extends "base.html"%}
+
+{% block content %}
+    <h1>{{ restaurantlocation.name }}<small> {{ restaurantlocation.category }}</small></h1>
+    <p>{{ restaurantlocation.location }}</p>
+    <p><i>Added to database on:</i> {{ restaurantlocation.timestamp|date }} || <i>Updated:</i> {{ restaurantlocation.updated|timesince }} ago</p>
+{% endblock %}

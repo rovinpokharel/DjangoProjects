@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title_content %}
+Hello || {{ block.super }}
+{#    using super function we can add the content of parent class as well as base class like inheritance#}
+{% endblock %}
+{% block content %}
+    <h1>Hello World</h1><br>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title_content %}
+Contact
+{% endblock %}
+{% block content %}
+    <h1>Hello World</h1><br>
+
+{# jinja templating #}
+{% if name %} {# condition format #}
+    Name:
+    {% for item in name %}
+        {{ name }}{# variable selection #}
+    {% endfor %}
+{% endif %}<br>
+
+{% if Address %}
+    Address:
+    {% for item in Address %}
+        {{ item }}
+    {% endfor %}
+{% endif %}
+
+{% if Email %}
+    Email:
+    {% for item in Email %}
+        {{ item }}
+    {% endfor %}
+{% endif %}
+
+{% if Phone %}
+    Phone:
+    {% for item in Phone %}
+        {{ item }}
+    {% endfor %}
+{% endif %}
+{% endblock %}

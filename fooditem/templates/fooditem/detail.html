@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ object.name }}</h1>
+    <h3>Contents</h3>
+    {% if object.contents %}
+        {% for item in object.get_contents %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    {% endif %}
+
+        <h3>Excludes</h3>
+    {% if object.excludes %}
+        {% for item in object.get_excludes %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    {% endif %}
+    <p><i>Added to database on:</i> {{ object.timestamp|date }} || <i>Updated:</i> {{ object.updated|timesince }} ago </p>
+{% endblock %}

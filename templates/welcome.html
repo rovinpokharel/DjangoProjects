@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title_content %}
+{#    here we put title of the page which is referenced to base.html#}
+Welcome
+{% endblock %}
+
+{% block content %}
+    <h1>Hello World</h1><br>
+
+<h2>Welcome to the restaurant page</h2>
+Restaurant name is {{ restaurant_name }} <br><br>
+
+{# jinja templating #}
+{% if items %} {# condition format #}
+    The items are: <br>
+    {% for item in items %}
+        <li>{{ item }}</li> {# variable selection #}
+    {% endfor %}
+{% endif %}<br>
+
+{% if Branches %}
+    The branches are: <br>
+    {% for item in Branches %}
+        <li>{{ item }}</li>
+    {% endfor %}
+{% endif %}
+{% endblock %}

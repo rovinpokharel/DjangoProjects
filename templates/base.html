@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{#snippets is a small piece of code here we have link of css of blockchain in snippets folder#}
+      {% include "snippets\css.html" %}
+
+    <title>
+{#    here by creating block we can minimize codes and put title of the page here#}
+        {% block title_content %}
+    TryDjango
+    {% endblock %}
+    </title>
+  </head>
+  <body>
+
+  <div class="container">
+        {% include "snippets\nav.html" %}
+      {% block content %}
+{#          the content inside of block is replaced and can also be used by using super function#}
+          This is from base.html content block
+      {% endblock %}
+        {% block content2 %}
+{#the block can be empty too, it is used by other#}
+        {% endblock %}
+
+  </div>
+  {% include "snippets\js.html" %}
+  </body>
+</html>
